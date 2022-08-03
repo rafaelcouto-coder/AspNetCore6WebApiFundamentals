@@ -1,0 +1,20 @@
+Credenciais: Braspag Sandbox 
+MerchantId:  B003D26A-0F34-4123-9F4C-7C448833861C
+MerchantKey: SCEUMFTJGIXYLZTRVPBJMNAMERIJREFGRRQLBFUI
+------------------------------------------------------------------------------
+Credenciais: Cielo Sandbox 
+MerchantId:0db181c3-3362-4384-846c-7987065b933c
+MerchantKey:TTXFEUVTHQWYJIYLVDSAWFTHKEIBDTMVXNRYVFZY
+------------------------------------------------------------------------------
+Braspag Auth Sandbox
+ClientId: 19af30e5-e978-49f4-a97a-8a43dfc11398
+SecretKey: QpIX5GuIlwxH+ZL/qsYCkXKYGYWhXE7CaKV0BxnlCA8=
+------------------------------------------------------------------------------
+Usuário Cliente Cielo
+rasimoes.test
+
+Usuário Operador Cielo
+rasimoes.cielo
+
+Senha: vZRsi8Wa
+------------------------------------------------------------------------------
