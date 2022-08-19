@@ -63,7 +63,7 @@ namespace CityInfo.API.Controllers
             if (includePointsOfInterest)
             {
                 return Ok(_mapper.Map<CityDto>(city));
-            }
+            } 
 
             return Ok(_mapper.Map<CityWithoutPointsOfInterestDto>(city));
         }
