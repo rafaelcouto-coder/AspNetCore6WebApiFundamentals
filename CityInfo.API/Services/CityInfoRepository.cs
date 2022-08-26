@@ -82,6 +82,16 @@ namespace CityInfo.API.Services
                 .Where(p => p.CityId == CityId).ToListAsync();
         }
 
+        public Task AddCityAsync(City city)
+        {
+            if (city != null)
+            {
+                _context.Cities.Add(city);
+            }
+
+            return Task.CompletedTask;
+        }
+
         public async Task AddPointOfInterestForCityAsync(int cityId,
             PointOfInterest pointOfInterest)
         {
@@ -101,6 +111,11 @@ namespace CityInfo.API.Services
         public async Task<bool> SaveChancesAsync()
         {
             return (await _context.SaveChangesAsync() >= 0);
+        }
+
+        public async Task<bool> CityNameMatchesCityId(string? cityName, int cityId)
+        {
+            return await _context.Cities.AnyAsync(c => c.Id == cityId && c.Name == cityName);
         }
     }
 }

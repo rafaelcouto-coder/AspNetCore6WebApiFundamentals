@@ -1,13 +1,17 @@
 ﻿using AutoMapper;
 using CityInfo.API.Model;
 using CityInfo.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Serilog.Core;
 using System.Text.Json;
 
 namespace CityInfo.API.Controllers
 {
     [ApiController]
-    [Route("api/cities")]
+    //[Authorize]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/cities")]
     public class CitiesController : ControllerBase
     {
         private readonly ICityInfoRepository _cityInfoRepository;
@@ -20,6 +24,24 @@ namespace CityInfo.API.Controllers
             _cityInfoRepository = cityInfoRepository ??
                 throw new ArgumentNullException(nameof(cityInfoRepository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+        }
+        [HttpPost]
+        public async Task<ActionResult<CityWithoutPointsOfInterestDto>> CreateCity(CityForCreatingDto city)
+        {
+            var entityCity = _mapper.Map<Entities.City>(city);
+
+            await _cityInfoRepository.AddCityAsync(entityCity);
+
+            await _cityInfoRepository.SaveChancesAsync();
+
+            var convertCityDto = _mapper.Map<CityWithoutPointsOfInterestDto>(entityCity);
+
+            return CreatedAtRoute("GetCity",
+                new
+                {
+                    Id = entityCity.Id
+                },
+                convertCityDto);
         }
 
         [HttpGet]
@@ -37,10 +59,13 @@ namespace CityInfo.API.Controllers
             Response.Headers.Add("X-Pagination",
                 JsonSerializer.Serialize(paginationMedatada));
 
-            return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities));         
+            return Ok(_mapper.Map<IEnumerable<CityWithoutPointsOfInterestDto>>(cityEntities));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetCity")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetCity(
             int id, bool includePointsOfInterest = false)
         {

@@ -9,6 +9,8 @@ namespace CityInfo.API.Profiles
         {
             CreateMap<Entities.City, CityWithoutPointsOfInterestDto>();
             CreateMap<Entities.City, CityDto>();
+            CreateMap<CityForCreatingDto, Entities.City>();
+            CreateMap<Entities.City, CityWithoutPointsOfInterestDto> ();
         }
     }
 }

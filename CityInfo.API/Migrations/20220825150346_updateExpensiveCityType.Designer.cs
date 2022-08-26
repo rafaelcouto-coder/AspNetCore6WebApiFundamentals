@@ -2,6 +2,7 @@
 using CityInfo.API.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CityInfo.API.Migrations
 {
     [DbContext(typeof(CityInfoContext))]
-    partial class CityInfoContextModelSnapshot : ModelSnapshot
+    [Migration("20220825150346_updateExpensiveCityType")]
+    partial class updateExpensiveCityType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.8");
@@ -26,7 +28,7 @@ namespace CityInfo.API.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("ExpensiveCity")
+                    b.Property<int>("ExpensiveCityType")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
@@ -43,21 +45,21 @@ namespace CityInfo.API.Migrations
                         {
                             Id = 1,
                             Description = "The one with that big park.",
-                            ExpensiveCity = 0,
+                            ExpensiveCityType = 0,
                             Name = "New York City"
                         },
                         new
                         {
                             Id = 2,
                             Description = "The one with the cathedral that was never really finished.",
-                            ExpensiveCity = 0,
+                            ExpensiveCityType = 0,
                             Name = "Antwerp"
                         },
                         new
                         {
                             Id = 3,
                             Description = "The one with that big tower.",
-                            ExpensiveCity = 0,
+                            ExpensiveCityType = 0,
                             Name = "Paris"
                         });
                 });

@@ -1,5 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CityInfo.API.Enum;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace CityInfo.API.Entities
 {
@@ -15,6 +17,9 @@ namespace CityInfo.API.Entities
 
         [MaxLength(50)]
         public string? Description { get; set; }
+
+        [Required]
+        public ExpensiveCityType ExpensiveCity { get; set; }
 
         public ICollection<PointOfInterest> PointsOfInterest { get; set; }
             = new List<PointOfInterest>();
