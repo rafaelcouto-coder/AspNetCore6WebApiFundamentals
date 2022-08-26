@@ -26,3 +26,9 @@ POST Cidade
 <p align="left">
   <img src="https://user-images.githubusercontent.com/52931317/186796271-c8b883da-2f12-4a2f-8afd-aee956e7eee9.png" title="hover text">
 </p>
+
+Get Cidade por id ocultando os pontos de interesse
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/52931317/186796854-53e9face-d070-4a00-b6d1-57e06cd018b3.png" title="hover text">
+</p>
+
