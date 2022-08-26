@@ -22,6 +22,10 @@ Tecnologias:
 - Entity Framework 
 - Swagger 
 
+<div>
 POST Cidade
-![image](https://user-images.githubusercontent.com/52931317/186796271-c8b883da-2f12-4a2f-8afd-aee956e7eee9.png)
+![image](https://user-images.githubusercontent.com/52931317/186796271-c8b883da-2f12-4a2f-8afd-aee956e7eee9.png) 
+</div>
+
+
 
