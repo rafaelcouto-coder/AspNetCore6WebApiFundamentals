@@ -1,6 +1,6 @@
 O intuito da API é cadastrar, listar, editar e excluir cidades e seus pontos turisticos.
 
- <img align="right" alt="Rafa-pic" height="150" style="border-radius:50px;" src="https://media.istockphoto.com/vectors/new-york-city-skyline-horizontal-banner-black-and-white-silhouette-of-vector-id1065513344?k=20&m=1065513344&s=170667a&w=0&h=yRt6ZR5QrK4Xg1ZL1oU3pOrKJwkHGSPjX-tYCxUvtFw= ">
+ <img alt="new york"   src="https://media.istockphoto.com/vectors/new-york-city-skyline-horizontal-banner-black-and-white-silhouette-of-vector-id1065513344?k=20&m=1065513344&s=170667a&w=0&h=yRt6ZR5QrK4Xg1ZL1oU3pOrKJwkHGSPjX-tYCxUvtFw= ">
 
 
 Os seguintes conceitos foram abortados neste projeto:
