@@ -24,6 +24,5 @@ Tecnologias:
 
 POST Cidade
 <p align="center">
-  <img src="your_relative_path_here" width="350" title="hover text">
-  <img src="https://user-images.githubusercontent.com/52931317/186796271-c8b883da-2f12-4a2f-8afd-aee956e7eee9.png" width="350" alt="accessibility text">
+  <img src="https://user-images.githubusercontent.com/52931317/186796271-c8b883da-2f12-4a2f-8afd-aee956e7eee9.png" width="350" title="hover text">
 </p>
