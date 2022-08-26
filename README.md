@@ -17,7 +17,7 @@ Os seguintes conceitos foram abortados neste projeto:
 - Paging Resources
 - Token validation and authorization policy
 
-Tecnologia:
+Tecnologias:
 - ASP.NET Core 6
 - Entity Framework 
 - Swagger 
