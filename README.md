@@ -64,12 +64,3 @@ GET Busca de cidade páginada
   <img src="https://user-images.githubusercontent.com/52931317/186798197-39b73194-5e47-46a2-8ec4-ae9d9434b9ae.png" title="hover text">
    <img src="https://user-images.githubusercontent.com/52931317/186798241-3f110d7b-8b53-4727-b456-c4fc32d05d72.png" title="hover text">
 </p>
-
-<p align="left">
-  <img src="" title="hover text">
-</p>
-
-<p align="left">
-  <img src="" title="hover text">
-</p>
-
