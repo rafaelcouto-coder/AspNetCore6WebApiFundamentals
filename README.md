@@ -22,6 +22,13 @@ Tecnologias:
 - Entity Framework 
 - Swagger 
 
+Endpoints
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/52931317/186797445-421eef53-5466-40dc-b7df-12fbb4e38656.png" title="hover text">
+</p>
+
+Exemplos práticos
+
 POST Cidade
 <p align="left">
   <img src="https://user-images.githubusercontent.com/52931317/186796271-c8b883da-2f12-4a2f-8afd-aee956e7eee9.png" title="hover text">
