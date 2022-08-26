@@ -22,3 +22,5 @@ Tecnologias:
 - Entity Framework 
 - Swagger 
 
+POST Cidade
+![image](https://user-images.githubusercontent.com/52931317/186796209-5bcbe2a2-d528-4a30-b605-9b83006eeaf5.png)
